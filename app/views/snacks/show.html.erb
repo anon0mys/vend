@@ -1,3 +1,10 @@
 <h2><%= @snack.name %></h2>
 
 <h5><%= "Snack Price: $#{'%.2f' % (@snack.price.to_f / 100)}" %></h5>
+
+<h3>Locations:</h3>
+  <ul>
+    <% @machines.each do |machine| %>
+      <li><%= machine.location %></li>
+    <% end %>
+  </ul>
