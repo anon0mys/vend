@@ -5,6 +5,9 @@
 <h3>Locations:</h3>
   <ul>
     <% @machines.each do |machine| %>
-      <li><%= machine.location %></li>
+      <li>
+        <%= machine.location %>
+        <%= "(#{machine.snacks.count} kinds of snacks, average price of $#{'%.2f' % machine.average_price})" %>
+      </li>
     <% end %>
   </ul>
