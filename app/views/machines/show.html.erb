@@ -4,7 +4,8 @@
   <% @snacks.each do |snack| %>
     <li>
       <%= snack.name %>
-      <%= "$#{snack.price / 100}" %>
+      <%= "$#{'%.2f' % (snack.price.to_f / 100)}" %>
     </li>
   <% end %>
+  <li><%= "Average Price: $#{'%.2f' % @average_price}" %></li>
 </ul>
